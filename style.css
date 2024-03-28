@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Minecraft Ten";
+    src: url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.eot");
+    src: url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.svg#Minecraft Ten")format("svg");
+}
+p {
+    cursor:default;
+    user-select: none;
+    font-family: "Minecraft Ten";
+    font-size: 100px;
+    text-shadow: 5px 10px 5px #EF3DFF;
+    color: #E600FF;
+    line-height: 350px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #BF00FF;
+}
+
+ip {
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    position: absolute;
+    font-family: "Minecraft Ten";
+    font-size: 70px;
+    color: wheat;
+    left: 50%;
+    top: 300px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+Playercount {
+    cursor:default;
+    user-select: none;
+    position: absolute;
+    font-family: "Minecraft Ten";
+    font-size: 50px;
+    color: wheat;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 375px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.square {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85cqmax;
+    height: 45cqmax;
+    background-color: rgba(19, 19, 19, 0.75);
+    box-shadow: 0px 0px 5px rgba(19, 19, 19, 0.75);
+    animation-name: unblur;
+    animation-duration: 0.25s;
+    border-radius: 25px;
+}
+
+.square:hover {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 85cqmax;
+    height: 45cqmax;
+    background-color: rgba(19, 19, 19, 0.75);
+    box-shadow: 0px 0px 25px rgba(19, 19, 19, 0.75);
+    animation-name: blur;
+    animation-duration: 0.25s;
+    border-radius: 25px;
+}
+
+@keyframes blur {
+    0% {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 85cqmax;
+        height: 45cqmax;
+        background-color: rgba(19, 19, 19, 0.75);
+        box-shadow: 0px 0px 5px rgba(19, 19, 19, 0.75);
+        border-radius: 25px;
+    }
+    100% {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 85cqmax;
+        height: 45cqmax;
+        background-color: rgba(19, 19, 19, 0.75);
+        box-shadow: 0px 0px 25px rgba(19, 19, 19, 0.75);
+        border-radius: 25px;
+    }
+}
+
+@keyframes unblur {
+    0% {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 85cqmax;
+        height: 45cqmax;
+        background-color: rgba(19, 19, 19, 0.75);
+        box-shadow: 0px 0px 25px rgba(19, 19, 19, 0.75);
+        border-radius: 25px;
+    }
+    100% {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 85cqmax;
+        height: 45cqmax;
+        background-color: rgba(19, 19, 19, 0.75);
+        box-shadow: 0px 0px 5px rgba(19, 19, 19, 0.75);
+        border-radius: 25px;
+    }
+}

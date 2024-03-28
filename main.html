@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<body>
+  <link rel="stylesheet" href="style.css" type='text/css'>
+  <head>
+    <body background="Untitled.jpeg" style="background-repeat: no-repeat; background-size: 100%;"></body>
+    <title>test</title>
+  </head>
+  <div class="square">  
+    <center>
+      <Top>shock games</Top>
+    </center>
+    <ip onclick="CopyIp()" id="ipButton">shock.games</ip>
+    <playercount id="count">0 online</playercount>
+    <img src="discord.svg" style="height: 175px; left: 100px; position: absolute; top: 500px; cursor: pointer; filter:invert(100%);user-select: none;" onclick="discord()"></img>
+    <h1 style="color: white; position: absolute; top: 675px; left: 125px; font-size: xx-large; cursor: default; user-select: none;">DISCORD</h1>
+    <img src="comment-solid.svg" style="height: 175px; left: 700px; position: absolute; top: 500px; cursor: pointer; filter:invert(100%);user-select: none;" onclick="forums()"></img>
+    <h1 style="color: white; position: absolute; top: 675px; left: 700px; font-size: xx-large; cursor: default; user-select: none;">FORUMS</h1>
+    <img src="book-solid.svg" style="height: 175px; left: 1300px; position: absolute; top: 500px; cursor: pointer; filter:invert(100%);user-select: none;" onclick="docs()"></img>
+    <h1 style="color: white; position: absolute; top: 675px; left: 1325px; font-size: xx-large; cursor: default; user-select: none;">DOCS</h1>
+    <script>
+      const delay = ms => new Promise(res => setTimeout(res, ms));
+      function sleep(ms) {
+        return new Promise(res => setTimeout(res, ms));
+      }
+      async function CopyIp() {
+        var button = document.getElementById("ipButton");
+        navigator.clipboard.writeText("shock.games");
+        button.innerHTML = "Copied!";
+        await delay(1000);
+        button.innerHTML = "shock.games";
+      } 
+      function initServerData(){
+          var serverIp = "swe.starfal.net"
+          var serverPort = "25569"
+          const serverIpElement = document.getElementById('count');
+
+          console.log('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort);
+          fetch('https://mcapi.us/server/status?ip='+serverIp+'&port='+serverPort).then((response) => {
+            response.json().then((data) => {
+              var count = data.players.now
+              console.log(count)
+              serverIpElement.innerHTML = count + " online"
+            })
+          });
+      }
+      function discord(){
+        location.replace("https://discord.com/invite/jK6DBZAzgQ")
+      }
+      function forums(){
+        location.replace("forum.shock.games")
+      }
+      function docs(){
+        location.replace("docs.shock.games")
+      }
+      window.setInterval(initServerData, 1000);
+    </script>  
+  </div>
+</body>
