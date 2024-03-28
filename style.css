@@ -9,7 +9,7 @@
 }
 p {
     left: 50%;
-    top: 50px;
+    top: -75px;
     position: absolute;
     transform: translate(-50%, -25%);
     cursor:default;
