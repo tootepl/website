@@ -8,6 +8,7 @@
     url("https://db.onlinewebfonts.com/t/a7fcb1becc12274d5b761b1d895f8aa9.svg#Minecraft Ten")format("svg");
 }
 p {
+    position: absolute;
     top: -100px;
     cursor:default;
     user-select: none;
